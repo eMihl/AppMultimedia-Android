@@ -1,5 +1,6 @@
 package com.paquete.pac_emilio
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Bitmap
 import android.icu.text.SimpleDateFormat
@@ -19,16 +20,13 @@ class Activity2 : AppCompatActivity() {
     val REQUEST_IMAGE_CAPTURE = 1
     lateinit var currentPhotoPath: String
 
-    /**La Activity2 es la cámara de fotos.
-     * En este ejercicio he tenido un problema similar al de la base de datos. En este caso la
-     * app consigue acceder a la cámara tras aceptar los permisos pertinentes, realizar la
-     * fotografía y acceder a la miniatura, pero aún no está listo para que se almacene en el
-     * dispositivo.
-     * */
-
+    /**
+     * La Activity2 es la cámara de fotos
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        title = "Cámara"
         setContentView(R.layout.activity_2)
 
         binding = Activity2Binding.inflate(layoutInflater)
@@ -39,18 +37,22 @@ class Activity2 : AppCompatActivity() {
 
     private fun escuchaTodo() {
 
-        binding = Activity2Binding.inflate(layoutInflater)
-        setContentView(binding.root)
-
+        // Listener del botón de regreso
         binding.buttonVolver.setOnClickListener {
             finish()
         }
+
+        // Listener para realizar foto
         binding.buttonFoto.setOnClickListener {
             dispatchTakePictureIntent()
-
         }
     }
 
+    /**
+     *  Funciones que realizan la fotografía
+     */
+
+    @SuppressLint("QueryPermissionsNeeded")
     private fun dispatchTakePictureIntent() {
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
             takePictureIntent.resolveActivity(packageManager)?.also {
@@ -64,7 +66,6 @@ class Activity2 : AppCompatActivity() {
             if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
                 val imageBitmap = data?.extras?.get("data") as Bitmap
                 binding.miniatura.setImageBitmap(imageBitmap)
-
             }
         }
 
@@ -78,7 +79,7 @@ class Activity2 : AppCompatActivity() {
                 currentPhotoPath = absolutePath
             }
         }
-    }
+}
 
 
 

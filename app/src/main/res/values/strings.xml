@@ -1,9 +1,20 @@
 <resources>
+    <string name="botonVolver">Volver</string>
+    <!--  Main Activity  -->
     <string name="app_name">PAC_EMILIO</string>
-    <string name="title_activity_1">Activity1</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
+    <string name="titularApp">Pack Multimedia</string>
+    <string name="botonDatabase"><![CDATA[BBDD —>]]></string>
+    <string name="botonCamara"><![CDATA[Cámara —>]]></string>
+    <string name="botonCollage"><![CDATA[Collage —>]]></string>
+    <!--  Activity1 -->
+    <string name="botonInsertarUsuario">Insertar usuario</string>
+    <string name="botonConsultarUser">Consultar usuario</string>
+    <string name="botonEliminarUser">Eliminar usuario</string>
+    <string name="etID">ID</string>
+    <string name="etNombre">Nombre</string>
+    <string name="etCategoria">Categoría</string>
+    <!--  Activity2 -->
+    <string name="botonAbrirCamara">  Abrir Cámara  </string>
+    <!--  Activity3 -->
+    <string name="botonVolverCollage">[ volver ]</string>
 </resources>

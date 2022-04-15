@@ -14,18 +14,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="468dp"
         android:background="@color/black"
-        android:text="Volver"
+        android:text="@string/botonVolver"
         android:textColor="@color/white"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/boton1"
-        android:layout_width="wrap_content"
+        android:id="@+id/botonInsertarUser"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:text="Insertar usuario"
+        android:text="@string/botonInsertarUsuario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -34,14 +34,15 @@
         app:layout_constraintVertical_bias="0.102" />
 
     <Button
-        android:id="@+id/boton2"
-        android:layout_width="wrap_content"
+        android:id="@+id/botonConsultarUser"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:text="Consultar usuario"
+        android:text="@string/botonConsultarUser"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton1" />
+        app:layout_constraintTop_toBottomOf="@+id/botonInsertarUser" />
 
     <EditText
         android:id="@+id/et1"
@@ -50,10 +51,10 @@
         android:layout_marginTop="78dp"
         android:ems="10"
         android:inputType="number"
-        android:hint="ID"
+        android:hint="@string/etID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton2" />
+        app:layout_constraintTop_toBottomOf="@+id/botonConsultarUser" />
 
     <EditText
         android:id="@+id/et2"
@@ -62,7 +63,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Nombre"
+        android:hint="@string/etNombre"
         app:layout_constraintEnd_toEndOf="@+id/et1"
         app:layout_constraintStart_toStartOf="@+id/et1"
         app:layout_constraintTop_toBottomOf="@+id/et1" />
@@ -72,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Categoría"
+        android:hint="@string/etCategoria"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/buttonVolver"
         app:layout_constraintEnd_toEndOf="@+id/et2"
@@ -82,13 +83,13 @@
         app:layout_constraintVertical_bias="0.123" />
 
     <Button
-        android:id="@+id/boton3"
-        android:layout_width="wrap_content"
+        android:id="@+id/botonEliminarUser"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
-        android:text="Eliminar usuario"
+        android:text="@string/botonEliminarUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton2" />
+        app:layout_constraintTop_toBottomOf="@+id/botonConsultarUser" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

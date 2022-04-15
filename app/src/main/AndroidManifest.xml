@@ -11,11 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PAC_EMILIO">
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
         <activity
             android:name=".Activity1"
             android:label="BBDD"
             android:windowSoftInputMode="adjustPan"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor">
 
         </activity>
 
@@ -23,10 +26,11 @@
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
-        <activity android:name=".Activity3"></activity>
+        <activity android:name=".Activity3" />
         <activity android:name=".Activity2" />
         <activity android:name=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,7 +55,8 @@
 
     <uses-feature
         android:name="android.hardware.CAMERA"
-        android:required="true" />
+        android:required="true"
+        tools:ignore="ManifestOrder" />
     <uses-feature android:name="android.hardware.type.watch" />
 
     <uses-permission android:name="android.permission.CAMERA" />
